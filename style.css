@@ -1,0 +1,123 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+    overflow: hidden;
+  }
+  
+  .music-player {
+    position: relative;
+    width: 350px;
+    margin: auto;
+    border-radius: 20px;
+  }
+  
+  .player-background {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    animation: backgroundMove 10s infinite alternate;
+  }
+  
+  .content {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 90%;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  .now-playing {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  .player-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .control-btn {
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .control-btn:hover {
+    transform: scale(1.2);
+    color: #00f2fe;
+  }
+  
+  .progress-container {
+    margin: 20px 0;
+    text-align: left;
+  }
+  
+  #progress-bar {
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+  
+  #time-display {
+    font-size: 0.9em;
+    margin-top: 5px;
+  }
+  
+  .volume-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  input[type="range"] {
+    width: 150px;
+  }
+  
+  .song-list {
+    margin-top: 30px;
+  }
+  
+  .song-list h3 {
+    font-size: 1.1em;
+  }
+  
+  .song-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .song-list ul li {
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .song-list ul li:hover {
+    background-color: #333;
+  }
+  
+  /* Animation for background */
+  @keyframes backgroundMove {
+    0% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+  }
+  
